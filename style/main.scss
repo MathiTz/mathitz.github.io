@@ -118,7 +118,8 @@ $desktop: 1200px;
     .container {
         width: 100%;
         padding-right: 15px;
-        padding-left: 15px;
+        padding-left: 5px;
+        margin-right: auto;
         margin-left: auto;
 
         h3 {
@@ -126,8 +127,16 @@ $desktop: 1200px;
         }
 
         span {
-            text-align: left;
+            padding-left: 0px;
         }
+    }
+
+    .container-fluid {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 5px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     #principal-image {
@@ -246,7 +255,7 @@ $desktop: 1200px;
         top: 60px;
         width: 250px;
         height: 0px;
-        transition: down 0.4s linear;
+        transition: left 0.4s linear;
         font-weight: bold;
 
         a {
@@ -259,13 +268,7 @@ $desktop: 1200px;
         }
     }
 
-    .container-fluid {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-    }
+
 
     /** TRATAMENTO DE IMAGENS **/
 

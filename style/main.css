@@ -77,12 +77,20 @@
   .container {
     width: 100%;
     padding-right: 15px;
-    padding-left: 15px;
+    padding-left: 5px;
+    margin-right: auto;
     margin-left: auto; }
     .container h3 {
       padding-top: 70px; }
     .container span {
-      text-align: left; }
+      padding-left: 0px; }
+
+  .container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto; }
 
   #principal-image {
     width: 100%;
@@ -170,20 +178,13 @@
     top: 60px;
     width: 250px;
     height: 0px;
-    transition: down 0.4s linear;
+    transition: left 0.4s linear;
     font-weight: bold; }
     #nav-slide a {
       color: rgba(13, 153, 111, 0.726);
       text-decoration: none; }
       #nav-slide a:hover {
         color: #be9696; }
-
-  .container-fluid {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto; }
 
   /** TRATAMENTO DE IMAGENS **/
   .img-fluid {
