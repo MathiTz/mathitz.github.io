@@ -36,6 +36,21 @@ $desktop: 1200px;
 */
 
 //////////
+<<<<<<< HEAD
+=======
+@media screen and (min-width: $tablet ){
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto;
+  .grid-item {
+    
+  }
+}
+}
+
+
+>>>>>>> b5fb481fe8a9fa49fe8770f21e793ba63085836a
 /*******AJUSTES GERAIS - MOBILE*******/
 @media screen and (max-width: $small) {
     * {
@@ -45,6 +60,7 @@ $desktop: 1200px;
         max-width: 100%;
         overflow-x: hidden;
     }
+<<<<<<< HEAD
 
     .grid-container {
         display: grid;
@@ -60,13 +76,28 @@ $desktop: 1200px;
         grid-template-columns: auto auto;
         justify-content: space-around;
     }
+=======
+  
+  .grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+  }
+>>>>>>> b5fb481fe8a9fa49fe8770f21e793ba63085836a
 
     header {
         display: inline;
 
         h2 {
+<<<<<<< HEAD
             font-family: 'Oswald', sans-serif;
         }
+=======
+          font-family: 'Oswald', sans-serif;
+      }
+>>>>>>> b5fb481fe8a9fa49fe8770f21e793ba63085836a
 
         ul {
             text-decoration: none;
@@ -80,8 +111,12 @@ $desktop: 1200px;
 
     div {
         .title {
+<<<<<<< HEAD
             font-family: 'Montserrat', sans-serif;
 
+=======
+          font-family: 'Montserrat', sans-serif;
+>>>>>>> b5fb481fe8a9fa49fe8770f21e793ba63085836a
             p {
                 display: flex;
                 justify-items: start;
@@ -132,11 +167,17 @@ $desktop: 1200px;
         text-align: center;
         background: $bg-principal;
         padding-right: 5px;
+<<<<<<< HEAD
 
         h4,
         h6 {
             display: inline;
         }
+=======
+      h4, h6 {
+        display: inline;
+      }
+>>>>>>> b5fb481fe8a9fa49fe8770f21e793ba63085836a
 
         h3 {
             padding-bottom: 70px;
@@ -173,7 +214,11 @@ $desktop: 1200px;
     .dumb-text {
         color: $dumb-text;
         overflow: hidden;
+<<<<<<< HEAD
         font-family: 'Ranga', cursive;
+=======
+      font-family: 'Ranga', cursive;
+>>>>>>> b5fb481fe8a9fa49fe8770f21e793ba63085836a
 
         a {
             position: relative;
@@ -212,7 +257,11 @@ $desktop: 1200px;
         border-radius: 2px;
         padding: 2px 10px;
         cursor: pointer;
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> b5fb481fe8a9fa49fe8770f21e793ba63085836a
         transition: all 0.4s linear;
 
         &:hover {
@@ -255,6 +304,7 @@ $desktop: 1200px;
         margin-right: auto;
         margin-left: auto;
     }
+<<<<<<< HEAD
 
     /** TRATAMENTO DE IMAGENS **/
 
@@ -272,11 +322,48 @@ $desktop: 1200px;
         max-width: 100%;
         height: auto;
     }
+=======
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/** TRATAMENTO DE IMAGENS **/
+
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: auto;
+>>>>>>> b5fb481fe8a9fa49fe8770f21e793ba63085836a
 }
 
 /*************************/
 
+<<<<<<< HEAD
 @media screen and (max-width: $tablet) and (min-width: $small) {
+=======
+@media screen and (max-width: $tablet) and (min-width: $small){
+>>>>>>> b5fb481fe8a9fa49fe8770f21e793ba63085836a
     * {
         padding: 0px;
         margin: 0px;
@@ -284,6 +371,7 @@ $desktop: 1200px;
         max-width: 100%;
         overflow-x: hidden;
     }
+<<<<<<< HEAD
 
     .grid {
         display: grid;
@@ -299,6 +387,23 @@ $desktop: 1200px;
         justify-content: space-evenly;
         align-content: space-evenly;
     }
+=======
+  
+  .grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+  }
+>>>>>>> b5fb481fe8a9fa49fe8770f21e793ba63085836a
 
     header {
         display: inline;
@@ -339,8 +444,12 @@ $desktop: 1200px;
                 }
             }
         }
+<<<<<<< HEAD
     }
 
+=======
+  }
+>>>>>>> b5fb481fe8a9fa49fe8770f21e793ba63085836a
     /*****************************/
 
     /********* PRINCIPAL *********/
@@ -350,7 +459,11 @@ $desktop: 1200px;
         padding-right: 15px;
         padding-left: 15px;
         margin-left: auto;
+<<<<<<< HEAD
         text-align: center;
+=======
+      text-align: center;
+>>>>>>> b5fb481fe8a9fa49fe8770f21e793ba63085836a
 
         h3 {
             padding-top: 70px;
@@ -503,6 +616,7 @@ $desktop: 1200px;
         margin-right: auto;
         margin-left: auto;
     }
+<<<<<<< HEAD
 
     .img-fluid {
         max-width: 100%;
@@ -521,6 +635,24 @@ $desktop: 1200px;
         max-width: 100%;
         height: auto;
     }
+=======
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    div {
+      border: 1px solid red;
+    }
+}
+
+.img-thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: auto;
+}
+>>>>>>> b5fb481fe8a9fa49fe8770f21e793ba63085836a
 }
 
 /** TRATAMENTO DE IMAGENS **/
@@ -539,6 +671,7 @@ $desktop: 1200px;
     max-width: 100%;
     height: auto;
 }
+<<<<<<< HEAD
 
 @media screen and (max-width: $desktop) and (min-width: $tablet) {
     * {
@@ -775,4 +908,6 @@ $desktop: 1200px;
         max-width: 100%;
         height: auto;
     }
+=======
+>>>>>>> b5fb481fe8a9fa49fe8770f21e793ba63085836a
 }
