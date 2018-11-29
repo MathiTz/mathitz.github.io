@@ -46,7 +46,7 @@ monospace;
   left: 25%; }
 
 .container-fluid {
-  width: 100%;
+  width: 90%;
   padding-right: 5px;
   padding-left: 5px;
   margin-right: auto;
@@ -73,13 +73,10 @@ monospace;
 .me-moon {
   display: none; }
 
-.lg-moon {
-  display: none; }
-
 /*                        */
 /* CLASSES COM ESCOPO     */
 .container {
-  width: 100%;
+  width: 90%;
   padding-right: 5px;
   padding-left: 5px;
   margin-right: auto;
@@ -120,8 +117,7 @@ monospace;
       color: #9d9ea3; }
 
 .grid {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
   justify-content: space-between; }
   .grid .grid-e {
     padding-top: 5px;
@@ -184,10 +180,12 @@ h3 {
   text-align: center; }
 
 hr {
-  max-width: 100%;
+  width: 90%;
   opacity: 0.4;
   padding-left: 10px;
-  padding-right: 10px; }
+  padding-right: 10px;
+  margin-right: auto;
+  margin-left: auto; }
 
 /*                        */
 /*           ID           */
@@ -214,7 +212,7 @@ hr {
 
 #nav-slide {
   position: absolute;
-  left: -250px;
+  left: -140px;
   top: 80px;
   width: 250px;
   height: 0px;
@@ -228,6 +226,33 @@ hr {
       color: #c35555; }
 
 @media screen and (min-width: 768px) {
+  .grid {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+
+  .big-container {
+    display: inline-block;
+    width: 80%; }
+
+  .container {
+    display: inline-block;
+    width: 80%; }
+
+  .btn-add {
+    display: inline-block;
+    width: 80%; }
+
+  .btn-text {
+    display: inline-block;
+    width: 80%; }
+
+  .banner {
+    display: inline-block;
+    width: 80%; }
+
   .sm-pic {
     display: none; }
 
@@ -238,7 +263,11 @@ hr {
     display: none; }
 
   .me-moon {
-    display: inline; } }
+    display: inline; }
+
+  #nav-slide {
+    top: 80px;
+    left: 200px; } }
 @media screen and (min-width: 1200px) {
   .sm-pic {
     display: none; }
@@ -247,6 +276,10 @@ hr {
     display: none; }
 
   .lg-pic {
-    display: inline; } }
+    display: inline; }
+
+  #nav-slide {
+    top: 100px;
+    left: -140px; } }
 
 /*# sourceMappingURL=main.css.map */
