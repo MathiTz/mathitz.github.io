@@ -7,22 +7,13 @@ font-family: 'Oswald', sans-serif;
 
 font-family: 'Ranga', cursive;
 
-/* REGRAS DE MEDIA */
-/* Extra small devices (phones, 600px and down) */
-/*
-@media only screen and (max-width: 600px) {...}
+font-family: 'Text Me One',
+sans-serif;
 
- Small devices (portrait tablets and large phones, 600px and up) 
-@media only screen and (min-width: 600px) {...}
+font-family: 'Roboto Mono',
+monospace;
 
- Medium devices (landscape tablets, 768px and up) 
-@media only screen and (min-width: 768px) {...}
 
- Large devices (laptops/desktops, 992px and up) 
-@media only screen and (min-width: 992px) {...}
-
- Extra large devices (large laptops and desktops, 1200px and up) 
-@media only screen and (min-width: 1200px) {...} 
 */
 /*******AJUSTES GERAIS - MOBILE*******/
 * {
@@ -97,10 +88,9 @@ font-family: 'Ranga', cursive;
   .big-container span {
     padding: 3px;
     margin: 5px;
-    border: 1px solid red;
     background-color: gray;
     border-radius: 100%;
-    align-items: center; }
+    display: inline-block; }
 
 .dumb-text {
   display: inline;
@@ -127,11 +117,17 @@ font-family: 'Ranga', cursive;
 .btn-add h4 {
   border: solid white;
   color: white;
-  background: #0f0f86; }
+  background: #0f0f86;
+  font-family: 'Text Me One', sans-serif; }
 
 .btn-text h4 {
   border: solid white;
-  background-color: gray; }
+  background: gray;
+  color: white;
+  font-family: 'Text Me One', sans-serif; }
+
+.btn-conf {
+  text-decoration: none; }
 
 /*                        */
 /*       TIPOGRAFIA       */
