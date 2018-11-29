@@ -45,6 +45,9 @@ monospace;
     grid-template-columns: auto auto auto;
     justify-content: space-evenly;
     align-content: space-evenly;
+    font-family: 'Roboto Mono',
+        monospace;
+    color: $title;
 }
 
 .title {
@@ -81,6 +84,22 @@ monospace;
     height: auto;
 }
 
+.me-pic {
+    display: none;
+}
+
+.lg-pic {
+    display: none;
+}
+
+.me-moon {
+    display: none;
+}
+
+.lg-moon {
+    display: none;
+}
+
 
 /*                        */
 
@@ -99,6 +118,7 @@ monospace;
     span {
         padding-left: 0px;
     }
+
 }
 
 .big-container {
@@ -154,6 +174,9 @@ monospace;
 }
 
 .btn-add {
+    a {
+        text-decoration: none;
+    }
 
     h4 {
         border: solid white;
@@ -161,22 +184,36 @@ monospace;
         background: $cart;
         font-family: 'Text Me One',
             sans-serif;
+        padding: 10px;
     }
 }
 
 .btn-text {
+    a {
+        text-decoration: none;
+
+        &:hover {
+            background-color: black;
+        }
+    }
+
     h4 {
         border: solid white;
         background: gray;
         color: white;
         font-family: 'Text Me One',
             sans-serif;
+        padding: 10px;
     }
 }
 
-.btn-conf {
-    text-decoration: none;
-
+.banner {
+    border: solid white;
+    color: rgb(87, 63, 63);
+    background: $bg-principal;
+    font-family: 'Text Me One',
+        sans-serif;
+    padding: 25px;
 }
 
 /*                        */
@@ -282,17 +319,47 @@ hr {
     height: 0px;
     transition: left 0.4s linear;
     font-weight: bold;
+    font-family: 'Inconsolata',
+        monospace;
 
     a {
-        color: rgba(13, 153, 111, 0.726);
+        color: rgba(36, 65, 195, 0.726);
         text-decoration: none;
 
         &:hover {
-            color: rgb(190, 150, 150);
+            color: rgb(195, 85, 85);
         }
     }
 }
 
-@media screen and (min-width: $tablet) {}
+@media screen and (min-width: $tablet) {
+    .sm-pic {
+        display: none;
+    }
 
-@media screen and (min-width: $desktop) {}
+    .me-pic {
+        display: inline;
+    }
+
+    .sm-moon {
+        display: none;
+    }
+
+    .me-moon {
+        display: inline;
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .sm-pic {
+        display: none;
+    }
+
+    .me-pic {
+        display: none;
+    }
+
+    .lg-pic {
+        display: inline;
+    }
+}

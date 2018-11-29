@@ -31,7 +31,9 @@ monospace;
   grid-gap: 10px;
   grid-template-columns: auto auto auto;
   justify-content: space-evenly;
-  align-content: space-evenly; }
+  align-content: space-evenly;
+  font-family: 'Roboto Mono', monospace;
+  color: #0f2d72; }
 
 .title {
   color: #0f2d72;
@@ -61,6 +63,18 @@ monospace;
   border-radius: 0.25rem;
   max-width: 100%;
   height: auto; }
+
+.me-pic {
+  display: none; }
+
+.lg-pic {
+  display: none; }
+
+.me-moon {
+  display: none; }
+
+.lg-moon {
+  display: none; }
 
 /*                        */
 /* CLASSES COM ESCOPO     */
@@ -114,20 +128,32 @@ monospace;
     padding-top: 5px;
     padding-right: 5px; }
 
+.btn-add a {
+  text-decoration: none; }
 .btn-add h4 {
   border: solid white;
   color: white;
   background: #0f0f86;
-  font-family: 'Text Me One', sans-serif; }
+  font-family: 'Text Me One', sans-serif;
+  padding: 10px; }
 
+.btn-text a {
+  text-decoration: none; }
+  .btn-text a:hover {
+    background-color: black; }
 .btn-text h4 {
   border: solid white;
   background: gray;
   color: white;
-  font-family: 'Text Me One', sans-serif; }
+  font-family: 'Text Me One', sans-serif;
+  padding: 10px; }
 
-.btn-conf {
-  text-decoration: none; }
+.banner {
+  border: solid white;
+  color: #573f3f;
+  background: #d0d7e5;
+  font-family: 'Text Me One', sans-serif;
+  padding: 25px; }
 
 /*                        */
 /*       TIPOGRAFIA       */
@@ -194,11 +220,34 @@ hr {
   width: 250px;
   height: 0px;
   transition: left 0.4s linear;
-  font-weight: bold; }
+  font-weight: bold;
+  font-family: 'Inconsolata', monospace; }
   #nav-slide a {
-    color: rgba(13, 153, 111, 0.726);
+    color: rgba(36, 65, 195, 0.726);
     text-decoration: none; }
     #nav-slide a:hover {
-      color: #be9696; }
+      color: #c35555; }
+
+@media screen and (min-width: 768px) {
+  .sm-pic {
+    display: none; }
+
+  .me-pic {
+    display: inline; }
+
+  .sm-moon {
+    display: none; }
+
+  .me-moon {
+    display: inline; } }
+@media screen and (min-width: 1200px) {
+  .sm-pic {
+    display: none; }
+
+  .me-pic {
+    display: none; }
+
+  .lg-pic {
+    display: inline; } }
 
 /*# sourceMappingURL=main.css.map */
