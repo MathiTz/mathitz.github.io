@@ -12,12 +12,14 @@ $desktop: 1200px;
 /*** FONTS***/
 /*
 
-    font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat', sans-serif;
 
-    font-family: 'Oswald', sans-serif;
+font-family: 'Oswald', sans-serif;
 
-    font-family: 'Ranga', cursive;
- /* Extra small devices (phones, 600px and down) */
+font-family: 'Ranga', cursive;
+
+/* REGRAS DE MEDIA */
+/* Extra small devices (phones, 600px and down) */
 /*
 @media only screen and (max-width: 600px) {...}
 
@@ -32,7 +34,6 @@ $desktop: 1200px;
 
  Extra large devices (large laptops and desktops, 1200px and up) 
 @media only screen and (min-width: 1200px) {...} 
-
 */
 
 //////////
@@ -44,14 +45,113 @@ $desktop: 1200px;
         text-align: center;
         max-width: 100%;
         overflow-x: hidden;
+        clear: both;
+        box-sizing: border-box;
     }
 
+    /* CLASSES FORA DE ESCOPO */
     .grid-container {
         display: grid;
         grid-gap: 10px;
         grid-template-columns: auto auto auto;
         justify-content: space-evenly;
         align-content: space-evenly;
+    }
+
+    .title {
+        color: $title;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .decrease {
+        border-bottom: 2px solid black;
+        width: 50%;
+        position: relative;
+        left: 25%;
+    }
+
+    .container-fluid {
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .img-thumbnail {
+        padding: 0.25rem;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /*                        */
+
+    /* CLASSES COM ESCOPO     */
+    .container {
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-right: auto;
+        margin-left: auto;
+
+        h3 {
+            padding-top: 70px;
+        }
+
+        span {
+            padding-left: 0px;
+        }
+    }
+
+    .big-container {
+        display: inline-block;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        background: $bg-principal;
+        padding-right: 5px;
+
+        h3 {
+            padding-bottom: 70px;
+            font-weight: 900;
+        }
+
+        span {
+            padding: 3px;
+            margin: 5px;
+            border: 1px solid red;
+            background-color: gray;
+            border-radius: 100%;
+            align-items: center;
+        }
+    }
+
+    .dumb-text {
+        display: inline;
+        color: $dumb-text;
+        overflow: hidden;
+        font-family: 'Ranga', cursive;
+
+        a {
+            position: absolute;
+            left: 0;
+            text-align: left;
+            color: $title;
+            text-decoration: none;
+
+            &:hover {
+                color: $dumb-text;
+            }
+        }
     }
 
     .grid {
@@ -61,9 +161,31 @@ $desktop: 1200px;
 
         .grid-e {
             padding-top: 5px;
-            padding-right: 20px;
+            padding-right: 5px;
         }
     }
+
+    .btn-add {
+        h4 {
+            border: solid white;
+            color: white;
+            background: $cart;
+        }
+    }
+
+    .btn-text {
+        h4 {
+            border: solid white;
+            background-color: gray;
+        }
+    }
+
+
+
+    /*                        */
+
+    /*       TIPOGRAFIA       */
+
 
     header {
         display: inline;
@@ -82,6 +204,8 @@ $desktop: 1200px;
             }
         }
     }
+
+
 
     div {
         .title {
@@ -111,73 +235,9 @@ $desktop: 1200px;
         }
     }
 
-    /*****************************/
-
-    /********* PRINCIPAL *********/
-
-    .container {
-        width: 100%;
-				padding: 0px;
-        margin-right: auto;
-        margin-left: auto;
-
-        h3 {
-            padding-top: 70px;
-        }
-
-        span {
-            padding-left: 0px;
-        }
-    }
-
-    .container-fluid {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 5px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    #principal-image {
-        width: 100%;
-        height: auto;
-        background-color: rgb(192, 189, 189);
-    }
-
-    .big-container {
-        display: inline-block;
-        width: 100%;
-        height: 200px;
-        text-align: center;
-        background: $bg-principal;
-        padding-right: 5px;
-
-
-        h4,
-        h6 {
-            display: inline;
-        }
-
-        h3 {
-            padding-bottom: 70px;
-            font-weight: 900;
-        }
-
-        span {
-            padding: 3px;
-            margin: 5px;
-            border: 1px solid red;
-            background-color: gray;
-            border-radius: 100%;
-            align-items: center;
-        }
-    }
-
     h3 {
         text-align: center;
     }
-
-    /*****************************/
 
     hr {
         max-width: 100%;
@@ -186,47 +246,15 @@ $desktop: 1200px;
         padding-right: 10px;
     }
 
-    .title {
-        color: $title;
+    /*                        */
+
+    /*           ID           */
+    #principal-image {
+        width: 100%;
+        height: auto;
+        background-color: rgb(192, 189, 189);
     }
 
-    .dumb-text {
-        color: $dumb-text;
-        overflow: hidden;
-        font-family: 'Ranga', cursive;
-
-        a {
-            position: relative;
-            right: 35%;
-            text-align: left;
-            color: $title;
-            text-decoration: none;
-
-            &:hover {
-                color: $dumb-text;
-            }
-        }
-    }
-
-    /*********** BOTÕES **********/
-
-    .btn-add {
-        h4 {
-            border: solid white;
-            color: white;
-            background: $cart;
-        }
-    }
-
-    .btn-text {
-        h4 {
-            border: solid white;
-            background-color: gray;
-        }
-    }
-
-    /*****************************/
-    /*********** MENU **********/
     #nav-btn {
         position: absolute;
         border-radius: 2px;
@@ -267,27 +295,10 @@ $desktop: 1200px;
         }
     }
 
-
-
-    /** TRATAMENTO DE IMAGENS **/
-
-
-    .img-fluid {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .img-thumbnail {
-        padding: 0.25rem;
-        background-color: #fff;
-        border: 1px solid #dee2e6;
-        border-radius: 0.25rem;
-        max-width: 100%;
-        height: auto;
-    }
 }
 
-/*************************/
+/*---------------------------------------*/
+
 
 @media screen and (max-width: $tablet) and (min-width: $small) {
     * {
@@ -296,8 +307,11 @@ $desktop: 1200px;
         text-align: center;
         max-width: 100%;
         overflow-x: hidden;
+        clear: both;
+        box-sizing: border-box;
     }
 
+    /* CLASSES FORA DE ESCOPO */
     .grid-container {
         display: grid;
         grid-gap: 10px;
@@ -306,12 +320,134 @@ $desktop: 1200px;
         align-content: space-evenly;
     }
 
+    .title {
+        color: $title;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .decrease {
+        border-bottom: 2px solid black;
+        width: 50%;
+        position: relative;
+        left: 25%;
+    }
+
+    .container-fluid {
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .img-thumbnail {
+        padding: 0.25rem;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /*                        */
+
+    /* CLASSES COM ESCOPO     */
+    .container {
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-right: auto;
+        margin-left: auto;
+
+        h3 {
+            padding-top: 70px;
+        }
+
+        span {
+            padding-left: 0px;
+        }
+    }
+
+    .big-container {
+        display: inline-block;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        background: $bg-principal;
+        padding-right: 5px;
+
+        h3 {
+            padding-bottom: 70px;
+            font-weight: 900;
+        }
+
+        span {
+            padding: 3px;
+            margin: 5px;
+            border: 1px solid red;
+            background-color: gray;
+            border-radius: 100%;
+            align-items: center;
+        }
+    }
+
+    .dumb-text {
+        display: inline;
+        color: $dumb-text;
+        overflow: hidden;
+        font-family: 'Ranga', cursive;
+
+        a {
+            position: absolute;
+            left: 0;
+            text-align: left;
+            color: $title;
+            text-decoration: none;
+
+            &:hover {
+                color: $dumb-text;
+            }
+        }
+    }
+
     .grid {
         display: grid;
-        grid-gap: 10px;
         grid-template-columns: auto auto;
-        justify-content: space-around;
+        justify-content: space-between;
+
+        .grid-e {
+            padding-top: 5px;
+            padding-right: 5px;
+        }
     }
+
+    .btn-add {
+        h4 {
+            border: solid white;
+            color: white;
+            background: $cart;
+        }
+    }
+
+    .btn-text {
+        h4 {
+            border: solid white;
+            background-color: gray;
+        }
+    }
+
+
+
+    /*                        */
+
+    /*       TIPOGRAFIA       */
+
 
     header {
         display: inline;
@@ -330,6 +466,8 @@ $desktop: 1200px;
             }
         }
     }
+
+
 
     div {
         .title {
@@ -359,65 +497,9 @@ $desktop: 1200px;
         }
     }
 
-    /*****************************/
-
-    /********* PRINCIPAL *********/
-
-    .container {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-left: auto;
-
-        h3 {
-            padding-top: 70px;
-        }
-
-        span {
-            text-align: left;
-        }
-    }
-
-    #principal-image {
-        width: 100%;
-        height: auto;
-        background-color: rgb(0, 0, 0);
-    }
-
-    .big-container {
-        display: inline-block;
-        width: 100%;
-        height: 200px;
-        text-align: center;
-        background: $bg-principal;
-        padding-right: 5px;
-
-
-        h4,
-        h6 {
-            display: inline;
-        }
-
-        h3 {
-            padding-bottom: 70px;
-            font-weight: 900;
-        }
-
-        span {
-            padding: 3px;
-            margin: 5px;
-            border: 1px solid red;
-            background-color: gray;
-            border-radius: 100%;
-            align-items: center;
-        }
-    }
-
     h3 {
         text-align: center;
     }
-
-    /*****************************/
 
     hr {
         max-width: 100%;
@@ -426,47 +508,15 @@ $desktop: 1200px;
         padding-right: 10px;
     }
 
-    .title {
-        color: $title;
+    /*                        */
+
+    /*           ID           */
+    #principal-image {
+        width: 100%;
+        height: auto;
+        background-color: rgb(192, 189, 189);
     }
 
-    .dumb-text {
-        color: $dumb-text;
-        overflow: hidden;
-        font-family: 'Ranga', cursive;
-
-        a {
-            position: relative;
-            right: 35%;
-            text-align: left;
-            color: $title;
-            text-decoration: none;
-
-            &:hover {
-                color: $dumb-text;
-            }
-        }
-    }
-
-    /*********** BOTÕES **********/
-
-    .btn-add {
-        h4 {
-            border: solid white;
-            color: white;
-            background: $cart;
-        }
-    }
-
-    .btn-text {
-        h4 {
-            border: solid white;
-            background-color: gray;
-        }
-    }
-
-    /*****************************/
-    /*********** MENU **********/
     #nav-btn {
         position: absolute;
         border-radius: 2px;
@@ -494,7 +544,7 @@ $desktop: 1200px;
         top: 60px;
         width: 250px;
         height: 0px;
-        transition: down 0.4s linear;
+        transition: left 0.4s linear;
         font-weight: bold;
 
         a {
@@ -506,32 +556,10 @@ $desktop: 1200px;
             }
         }
     }
-
-    .container-fluid {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    /** TRATAMENTO DE IMAGENS **/
-
-
-    .img-fluid {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .img-thumbnail {
-        padding: 0.25rem;
-        background-color: #fff;
-        border: 1px solid #dee2e6;
-        border-radius: 0.25rem;
-        max-width: 100%;
-        height: auto;
-    }
 }
+
+/*---------------------------------------*/
+
 
 @media screen and (max-width: $laptop) and (min-width: $tablet) {
     * {
@@ -540,8 +568,11 @@ $desktop: 1200px;
         text-align: center;
         max-width: 100%;
         overflow-x: hidden;
+        clear: both;
+        box-sizing: border-box;
     }
 
+    /* CLASSES FORA DE ESCOPO */
     .grid-container {
         display: grid;
         grid-gap: 10px;
@@ -550,18 +581,141 @@ $desktop: 1200px;
         align-content: space-evenly;
     }
 
+    .title {
+        color: $title;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .decrease {
+        border-bottom: 2px solid black;
+        width: 50%;
+        position: relative;
+        left: 25%;
+    }
+
+    .container-fluid {
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .img-thumbnail {
+        padding: 0.25rem;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /*                        */
+
+    /* CLASSES COM ESCOPO     */
+    .container {
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-right: auto;
+        margin-left: auto;
+
+        h3 {
+            padding-top: 70px;
+        }
+
+        span {
+            padding-left: 0px;
+        }
+    }
+
+    .big-container {
+        display: inline-block;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        background: $bg-principal;
+        padding-right: 5px;
+
+        h3 {
+            padding-bottom: 70px;
+            font-weight: 900;
+        }
+
+        span {
+            padding: 3px;
+            margin: 5px;
+            border: 1px solid red;
+            background-color: gray;
+            border-radius: 100%;
+            align-items: center;
+        }
+    }
+
+    .dumb-text {
+        display: inline;
+        color: $dumb-text;
+        overflow: hidden;
+        font-family: 'Ranga', cursive;
+
+        a {
+            position: absolute;
+            left: 0;
+            text-align: left;
+            color: $title;
+            text-decoration: none;
+
+            &:hover {
+                color: $dumb-text;
+            }
+        }
+    }
+
     .grid {
         display: grid;
-        grid-gap: 10px;
         grid-template-columns: auto auto;
-        justify-content: space-around;
+        justify-content: space-between;
+
+        .grid-e {
+            padding-top: 5px;
+            padding-right: 5px;
+        }
     }
+
+    .btn-add {
+        h4 {
+            border: solid white;
+            color: white;
+            background: $cart;
+        }
+    }
+
+    .btn-text {
+        h4 {
+            border: solid white;
+            background-color: gray;
+        }
+    }
+
+
+
+    /*                        */
+
+    /*       TIPOGRAFIA       */
+
 
     header {
         display: inline;
 
         h2 {
             font-family: 'Oswald', sans-serif;
+
         }
 
         ul {
@@ -573,6 +727,8 @@ $desktop: 1200px;
             }
         }
     }
+
+
 
     div {
         .title {
@@ -602,58 +758,9 @@ $desktop: 1200px;
         }
     }
 
-    /*****************************/
-
-    /********* PRINCIPAL *********/
-
-    .container {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-left: auto;
-
-        h3 {
-            padding-top: 70px;
-        }
-
-        span {
-            text-align: left;
-        }
-    }
-
-    .big-container {
-        display: inline-block;
-        width: 100%;
-        height: 200px;
-        text-align: center;
-        background: $bg-principal;
-        padding-right: 5px;
-
-        h4,
-        h6 {
-            display: inline;
-        }
-
-        h3 {
-            padding-bottom: 70px;
-            font-weight: 900;
-        }
-
-        span {
-            padding: 3px;
-            margin: 5px;
-            border: 1px solid red;
-            background-color: gray;
-            border-radius: 100%;
-            align-items: center;
-        }
-    }
-
     h3 {
         text-align: center;
     }
-
-    /*****************************/
 
     hr {
         max-width: 100%;
@@ -662,53 +769,20 @@ $desktop: 1200px;
         padding-right: 10px;
     }
 
-    .title {
-        color: $title;
+    /*                        */
+
+    /*           ID           */
+    #principal-image {
+        width: 100%;
+        height: auto;
+        background-color: rgb(192, 189, 189);
     }
 
-    .dumb-text {
-        color: $dumb-text;
-        overflow: hidden;
-        font-family: 'Ranga', cursive;
-
-        a {
-            position: relative;
-            right: 35%;
-            text-align: left;
-            color: $title;
-            text-decoration: none;
-
-            &:hover {
-                color: $dumb-text;
-            }
-        }
-    }
-
-    /*********** BOTÕES **********/
-
-    .btn-add {
-        h4 {
-            border: solid white;
-            color: white;
-            background: $cart;
-        }
-    }
-
-    .btn-text {
-        h4 {
-            border: solid white;
-            background-color: gray;
-        }
-    }
-
-    /*****************************/
-    /*********** MENU **********/
     #nav-btn {
         position: absolute;
         border-radius: 2px;
         padding: 2px 10px;
         cursor: pointer;
-
         transition: all 0.4s linear;
 
         &:hover {
@@ -731,7 +805,7 @@ $desktop: 1200px;
         top: 60px;
         width: 250px;
         height: 0px;
-        transition: down 0.4s linear;
+        transition: left 0.4s linear;
         font-weight: bold;
 
         a {
@@ -742,30 +816,5 @@ $desktop: 1200px;
                 color: rgb(190, 150, 150);
             }
         }
-    }
-
-    .container-fluid {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    /** TRATAMENTO DE IMAGENS **/
-
-
-    .img-fluid {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .img-thumbnail {
-        padding: 0.25rem;
-        background-color: #fff;
-        border: 1px solid #dee2e6;
-        border-radius: 0.25rem;
-        max-width: 100%;
-        height: auto;
     }
 }

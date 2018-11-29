@@ -1,13 +1,14 @@
-@charset "UTF-8";
 /*** FONTS***/
 /*
 
-    font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat', sans-serif;
 
-    font-family: 'Oswald', sans-serif;
+font-family: 'Oswald', sans-serif;
 
-    font-family: 'Ranga', cursive;
- /* Extra small devices (phones, 600px and down) */
+font-family: 'Ranga', cursive;
+
+/* REGRAS DE MEDIA */
+/* Extra small devices (phones, 600px and down) */
 /*
 @media only screen and (max-width: 600px) {...}
 
@@ -22,7 +23,6 @@
 
  Extra large devices (large laptops and desktops, 1200px and up) 
 @media only screen and (min-width: 1200px) {...} 
-
 */
 /*******AJUSTES GERAIS - MOBILE*******/
 @media screen and (max-width: 600px) {
@@ -31,8 +31,11 @@
     margin: 0px;
     text-align: center;
     max-width: 100%;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    clear: both;
+    box-sizing: border-box; }
 
+  /* CLASSES FORA DE ESCOPO */
   .grid-container {
     display: grid;
     grid-gap: 10px;
@@ -40,14 +43,99 @@
     justify-content: space-evenly;
     align-content: space-evenly; }
 
+  .title {
+    color: #0f2d72;
+    font-family: 'Montserrat', sans-serif; }
+
+  .decrease {
+    border-bottom: 2px solid black;
+    width: 50%;
+    position: relative;
+    left: 25%; }
+
+  .container-fluid {
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto; }
+
+  .img-fluid {
+    max-width: 100%;
+    height: auto; }
+
+  .img-thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: auto; }
+
+  /*                        */
+  /* CLASSES COM ESCOPO     */
+  .container {
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto; }
+    .container h3 {
+      padding-top: 70px; }
+    .container span {
+      padding-left: 0px; }
+
+  .big-container {
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background: #d0d7e5;
+    padding-right: 5px; }
+    .big-container h3 {
+      padding-bottom: 70px;
+      font-weight: 900; }
+    .big-container span {
+      padding: 3px;
+      margin: 5px;
+      border: 1px solid red;
+      background-color: gray;
+      border-radius: 100%;
+      align-items: center; }
+
+  .dumb-text {
+    display: inline;
+    color: #9d9ea3;
+    overflow: hidden;
+    font-family: 'Ranga', cursive; }
+    .dumb-text a {
+      position: absolute;
+      left: 0;
+      text-align: left;
+      color: #0f2d72;
+      text-decoration: none; }
+      .dumb-text a:hover {
+        color: #9d9ea3; }
+
   .grid {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between; }
     .grid .grid-e {
       padding-top: 5px;
-      padding-right: 20px; }
+      padding-right: 5px; }
 
+  .btn-add h4 {
+    border: solid white;
+    color: white;
+    background: #0f0f86; }
+
+  .btn-text h4 {
+    border: solid white;
+    background-color: gray; }
+
+  /*                        */
+  /*       TIPOGRAFIA       */
   header {
     display: inline; }
     header h2 {
@@ -72,90 +160,22 @@
     section span div h5 {
       padding-left: 20%; }
 
-  /*****************************/
-  /********* PRINCIPAL *********/
-  .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 5px;
-    margin-right: auto;
-    margin-left: auto; }
-    .container h3 {
-      padding-top: 70px; }
-    .container span {
-      padding-left: 0px; }
-
-  .container-fluid {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 5px;
-    margin-right: auto;
-    margin-left: auto; }
-
-  #principal-image {
-    width: 100%;
-    height: auto;
-    background-color: #c0bdbd; }
-
-  .big-container {
-    display: inline-block;
-    width: 100%;
-    height: 200px;
-    text-align: center;
-    background: #d0d7e5;
-    padding-right: 5px; }
-    .big-container h4,
-    .big-container h6 {
-      display: inline; }
-    .big-container h3 {
-      padding-bottom: 70px;
-      font-weight: 900; }
-    .big-container span {
-      padding: 3px;
-      margin: 5px;
-      border: 1px solid red;
-      background-color: gray;
-      border-radius: 100%;
-      align-items: center; }
-
   h3 {
     text-align: center; }
 
-  /*****************************/
   hr {
     max-width: 100%;
     opacity: 0.4;
     padding-left: 10px;
     padding-right: 10px; }
 
-  .title {
-    color: #0f2d72; }
+  /*                        */
+  /*           ID           */
+  #principal-image {
+    width: 100%;
+    height: auto;
+    background-color: #c0bdbd; }
 
-  .dumb-text {
-    color: #9d9ea3;
-    overflow: hidden;
-    font-family: 'Ranga', cursive; }
-    .dumb-text a {
-      position: relative;
-      right: 35%;
-      text-align: left;
-      color: #0f2d72;
-      text-decoration: none; }
-      .dumb-text a:hover {
-        color: #9d9ea3; }
-
-  /*********** BOTÕES **********/
-  .btn-add h4 {
-    border: solid white;
-    color: white;
-    background: #0f0f86; }
-
-  .btn-text h4 {
-    border: solid white;
-    background-color: gray; }
-
-  /*****************************/
-  /*********** MENU **********/
   #nav-btn {
     position: absolute;
     border-radius: 2px;
@@ -184,29 +204,19 @@
       color: rgba(13, 153, 111, 0.726);
       text-decoration: none; }
       #nav-slide a:hover {
-        color: #be9696; }
-
-  /** TRATAMENTO DE IMAGENS **/
-  .img-fluid {
-    max-width: 100%;
-    height: auto; }
-
-  .img-thumbnail {
-    padding: 0.25rem;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    max-width: 100%;
-    height: auto; } }
-/*************************/
+        color: #be9696; } }
+/*---------------------------------------*/
 @media screen and (max-width: 768px) and (min-width: 600px) {
   * {
     padding: 0px;
     margin: 0px;
     text-align: center;
     max-width: 100%;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    clear: both;
+    box-sizing: border-box; }
 
+  /* CLASSES FORA DE ESCOPO */
   .grid-container {
     display: grid;
     grid-gap: 10px;
@@ -214,12 +224,99 @@
     justify-content: space-evenly;
     align-content: space-evenly; }
 
+  .title {
+    color: #0f2d72;
+    font-family: 'Montserrat', sans-serif; }
+
+  .decrease {
+    border-bottom: 2px solid black;
+    width: 50%;
+    position: relative;
+    left: 25%; }
+
+  .container-fluid {
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto; }
+
+  .img-fluid {
+    max-width: 100%;
+    height: auto; }
+
+  .img-thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: auto; }
+
+  /*                        */
+  /* CLASSES COM ESCOPO     */
+  .container {
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto; }
+    .container h3 {
+      padding-top: 70px; }
+    .container span {
+      padding-left: 0px; }
+
+  .big-container {
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background: #d0d7e5;
+    padding-right: 5px; }
+    .big-container h3 {
+      padding-bottom: 70px;
+      font-weight: 900; }
+    .big-container span {
+      padding: 3px;
+      margin: 5px;
+      border: 1px solid red;
+      background-color: gray;
+      border-radius: 100%;
+      align-items: center; }
+
+  .dumb-text {
+    display: inline;
+    color: #9d9ea3;
+    overflow: hidden;
+    font-family: 'Ranga', cursive; }
+    .dumb-text a {
+      position: absolute;
+      left: 0;
+      text-align: left;
+      color: #0f2d72;
+      text-decoration: none; }
+      .dumb-text a:hover {
+        color: #9d9ea3; }
+
   .grid {
     display: grid;
-    grid-gap: 10px;
     grid-template-columns: auto auto;
-    justify-content: space-around; }
+    justify-content: space-between; }
+    .grid .grid-e {
+      padding-top: 5px;
+      padding-right: 5px; }
 
+  .btn-add h4 {
+    border: solid white;
+    color: white;
+    background: #0f0f86; }
+
+  .btn-text h4 {
+    border: solid white;
+    background-color: gray; }
+
+  /*                        */
+  /*       TIPOGRAFIA       */
   header {
     display: inline; }
     header h2 {
@@ -244,82 +341,22 @@
     section span div h5 {
       padding-left: 20%; }
 
-  /*****************************/
-  /********* PRINCIPAL *********/
-  .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-left: auto; }
-    .container h3 {
-      padding-top: 70px; }
-    .container span {
-      text-align: left; }
-
-  #principal-image {
-    width: 100%;
-    height: auto;
-    background-color: black; }
-
-  .big-container {
-    display: inline-block;
-    width: 100%;
-    height: 200px;
-    text-align: center;
-    background: #d0d7e5;
-    padding-right: 5px; }
-    .big-container h4,
-    .big-container h6 {
-      display: inline; }
-    .big-container h3 {
-      padding-bottom: 70px;
-      font-weight: 900; }
-    .big-container span {
-      padding: 3px;
-      margin: 5px;
-      border: 1px solid red;
-      background-color: gray;
-      border-radius: 100%;
-      align-items: center; }
-
   h3 {
     text-align: center; }
 
-  /*****************************/
   hr {
     max-width: 100%;
     opacity: 0.4;
     padding-left: 10px;
     padding-right: 10px; }
 
-  .title {
-    color: #0f2d72; }
+  /*                        */
+  /*           ID           */
+  #principal-image {
+    width: 100%;
+    height: auto;
+    background-color: #c0bdbd; }
 
-  .dumb-text {
-    color: #9d9ea3;
-    overflow: hidden;
-    font-family: 'Ranga', cursive; }
-    .dumb-text a {
-      position: relative;
-      right: 35%;
-      text-align: left;
-      color: #0f2d72;
-      text-decoration: none; }
-      .dumb-text a:hover {
-        color: #9d9ea3; }
-
-  /*********** BOTÕES **********/
-  .btn-add h4 {
-    border: solid white;
-    color: white;
-    background: #0f0f86; }
-
-  .btn-text h4 {
-    border: solid white;
-    background-color: gray; }
-
-  /*****************************/
-  /*********** MENU **********/
   #nav-btn {
     position: absolute;
     border-radius: 2px;
@@ -342,41 +379,25 @@
     top: 60px;
     width: 250px;
     height: 0px;
-    transition: down 0.4s linear;
+    transition: left 0.4s linear;
     font-weight: bold; }
     #nav-slide a {
       color: rgba(13, 153, 111, 0.726);
       text-decoration: none; }
       #nav-slide a:hover {
-        color: #be9696; }
-
-  .container-fluid {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto; }
-
-  /** TRATAMENTO DE IMAGENS **/
-  .img-fluid {
-    max-width: 100%;
-    height: auto; }
-
-  .img-thumbnail {
-    padding: 0.25rem;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    max-width: 100%;
-    height: auto; } }
+        color: #be9696; } }
+/*---------------------------------------*/
 @media screen and (max-width: 992px) and (min-width: 768px) {
   * {
     padding: 0px;
     margin: 0px;
     text-align: center;
     max-width: 100%;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    clear: both;
+    box-sizing: border-box; }
 
+  /* CLASSES FORA DE ESCOPO */
   .grid-container {
     display: grid;
     grid-gap: 10px;
@@ -384,12 +405,99 @@
     justify-content: space-evenly;
     align-content: space-evenly; }
 
+  .title {
+    color: #0f2d72;
+    font-family: 'Montserrat', sans-serif; }
+
+  .decrease {
+    border-bottom: 2px solid black;
+    width: 50%;
+    position: relative;
+    left: 25%; }
+
+  .container-fluid {
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto; }
+
+  .img-fluid {
+    max-width: 100%;
+    height: auto; }
+
+  .img-thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: auto; }
+
+  /*                        */
+  /* CLASSES COM ESCOPO     */
+  .container {
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto;
+    margin-left: auto; }
+    .container h3 {
+      padding-top: 70px; }
+    .container span {
+      padding-left: 0px; }
+
+  .big-container {
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background: #d0d7e5;
+    padding-right: 5px; }
+    .big-container h3 {
+      padding-bottom: 70px;
+      font-weight: 900; }
+    .big-container span {
+      padding: 3px;
+      margin: 5px;
+      border: 1px solid red;
+      background-color: gray;
+      border-radius: 100%;
+      align-items: center; }
+
+  .dumb-text {
+    display: inline;
+    color: #9d9ea3;
+    overflow: hidden;
+    font-family: 'Ranga', cursive; }
+    .dumb-text a {
+      position: absolute;
+      left: 0;
+      text-align: left;
+      color: #0f2d72;
+      text-decoration: none; }
+      .dumb-text a:hover {
+        color: #9d9ea3; }
+
   .grid {
     display: grid;
-    grid-gap: 10px;
     grid-template-columns: auto auto;
-    justify-content: space-around; }
+    justify-content: space-between; }
+    .grid .grid-e {
+      padding-top: 5px;
+      padding-right: 5px; }
 
+  .btn-add h4 {
+    border: solid white;
+    color: white;
+    background: #0f0f86; }
+
+  .btn-text h4 {
+    border: solid white;
+    background-color: gray; }
+
+  /*                        */
+  /*       TIPOGRAFIA       */
   header {
     display: inline; }
     header h2 {
@@ -414,77 +522,22 @@
     section span div h5 {
       padding-left: 20%; }
 
-  /*****************************/
-  /********* PRINCIPAL *********/
-  .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-left: auto; }
-    .container h3 {
-      padding-top: 70px; }
-    .container span {
-      text-align: left; }
-
-  .big-container {
-    display: inline-block;
-    width: 100%;
-    height: 200px;
-    text-align: center;
-    background: #d0d7e5;
-    padding-right: 5px; }
-    .big-container h4,
-    .big-container h6 {
-      display: inline; }
-    .big-container h3 {
-      padding-bottom: 70px;
-      font-weight: 900; }
-    .big-container span {
-      padding: 3px;
-      margin: 5px;
-      border: 1px solid red;
-      background-color: gray;
-      border-radius: 100%;
-      align-items: center; }
-
   h3 {
     text-align: center; }
 
-  /*****************************/
   hr {
     max-width: 100%;
     opacity: 0.4;
     padding-left: 10px;
     padding-right: 10px; }
 
-  .title {
-    color: #0f2d72; }
+  /*                        */
+  /*           ID           */
+  #principal-image {
+    width: 100%;
+    height: auto;
+    background-color: #c0bdbd; }
 
-  .dumb-text {
-    color: #9d9ea3;
-    overflow: hidden;
-    font-family: 'Ranga', cursive; }
-    .dumb-text a {
-      position: relative;
-      right: 35%;
-      text-align: left;
-      color: #0f2d72;
-      text-decoration: none; }
-      .dumb-text a:hover {
-        color: #9d9ea3; }
-
-  /*********** BOTÕES **********/
-  .btn-add h4 {
-    border: solid white;
-    color: white;
-    background: #0f0f86; }
-
-  .btn-text h4 {
-    border: solid white;
-    background-color: gray; }
-
-  /*****************************/
-  /*********** MENU **********/
   #nav-btn {
     position: absolute;
     border-radius: 2px;
@@ -507,32 +560,12 @@
     top: 60px;
     width: 250px;
     height: 0px;
-    transition: down 0.4s linear;
+    transition: left 0.4s linear;
     font-weight: bold; }
     #nav-slide a {
       color: rgba(13, 153, 111, 0.726);
       text-decoration: none; }
       #nav-slide a:hover {
-        color: #be9696; }
-
-  .container-fluid {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto; }
-
-  /** TRATAMENTO DE IMAGENS **/
-  .img-fluid {
-    max-width: 100%;
-    height: auto; }
-
-  .img-thumbnail {
-    padding: 0.25rem;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-    border-radius: 0.25rem;
-    max-width: 100%;
-    height: auto; } }
+        color: #be9696; } }
 
 /*# sourceMappingURL=main.css.map */
