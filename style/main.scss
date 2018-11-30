@@ -389,9 +389,15 @@ table {
         display: inline;
     }
 
-    #nav-btn {}
+    #nav-btn {
+        display: none;
 
-    #nav-slide {}
+    }
+
+    #nav-slide {
+        height: 100%;
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: $desktop) {
@@ -407,5 +413,9 @@ table {
         display: inline;
     }
 
-    #nav-slide {}
+    #nav-btn {
+        display: inline-block;
+        left: 130px;
+    }
+
 }

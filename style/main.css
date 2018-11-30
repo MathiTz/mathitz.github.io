@@ -272,7 +272,14 @@ table {
     display: none; }
 
   .me-moon {
-    display: inline; } }
+    display: inline; }
+
+  #nav-btn {
+    display: none; }
+
+  #nav-slide {
+    height: 100%;
+    width: 100%; } }
 @media screen and (min-width: 1200px) {
   .sm-pic {
     display: none; }
@@ -281,6 +288,10 @@ table {
     display: none; }
 
   .lg-pic {
-    display: inline; } }
+    display: inline; }
+
+  #nav-btn {
+    display: inline-block;
+    left: 130px; } }
 
 /*# sourceMappingURL=main.css.map */
