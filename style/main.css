@@ -291,7 +291,6 @@ table {
     display: inline; }
 
   #nav-btn {
-    display: inline-block;
-    left: 130px; } }
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */
