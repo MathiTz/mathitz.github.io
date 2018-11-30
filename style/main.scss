@@ -39,17 +39,6 @@ monospace;
 }
 
 /* CLASSES FORA DE ESCOPO */
-.grid-container {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
-    align-content: space-evenly;
-    font-family: 'Roboto Mono',
-        monospace;
-    color: $title;
-}
-
 .title {
     color: $title;
     font-family: 'Montserrat', sans-serif;
@@ -63,7 +52,7 @@ monospace;
 }
 
 .container-fluid {
-    width: 90%;
+    width: 80%;
     padding-right: 5px;
     padding-left: 5px;
     margin-right: auto;
@@ -96,16 +85,12 @@ monospace;
     display: none;
 }
 
-.grid-it {
-    background: rgb(197, 193, 193);
-}
-
 
 /*                        */
 
 /* CLASSES COM ESCOPO     */
 .container {
-    width: 90%;
+    width: 80%;
     padding-right: 5px;
     padding-left: 5px;
     margin-right: auto;
@@ -279,18 +264,20 @@ hr {
 }
 
 table {
-  margin-left: auto;
-  margin-right: auto;
-  display: inline;
-  width: 90%;
-  border-collapse: collapse;
-  padding: 10px;
-  td {
-    padding: 5px;
-  }
-  .table-color {
-    background-color: rgb(183, 184, 188);
-  }
+    width: 80%;
+    padding: 10px 5px 10px 5px;
+    margin-right: auto;
+    margin-left: auto;
+    border-collapse: collapse;
+    display: inline;
+
+    td {
+        padding: 5px;
+    }
+
+    .table-color {
+        background-color: rgb(183, 184, 188);
+    }
 }
 
 
@@ -346,17 +333,22 @@ table {
 }
 
 @media screen and (min-width: $tablet) {
-    .grid {
+    .flex {
         display: flex;
         justify-content: space-between;
-        width: 80%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .big-container {
+    .container-fluid {
         display: inline-block;
         width: 80%;
+    }
+
+    .big-container {
+        display: inline-block;
+        width: 100%;
     }
 
     .container {
@@ -366,17 +358,19 @@ table {
 
     .btn-add {
         display: inline-block;
-        width: 80%;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .btn-text {
         display: inline-block;
-        width: 80%;
+        width: 100%;
     }
 
     .banner {
         display: inline-block;
-        width: 80%;
+        width: 100%;
     }
 
     .sm-pic {
